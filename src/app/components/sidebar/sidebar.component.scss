@@ -1,0 +1,44 @@
+.sidebar-container {
+  width: 100%;
+  height: 100%;
+}
+
+.drawer {
+  background-color: #F4F6FC;
+  border: none;
+  padding: 8px;
+  // padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #454746;
+
+  .drawer-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-size {
+    font-size: 48px;
+  }
+}
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button-font{
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.app-title {
+  color: #4dab23;
+  margin-bottom: 3rem;
+}

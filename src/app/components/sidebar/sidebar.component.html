@@ -1,1 +1,16 @@
-<p>sidebar works!</p>
+<mat-drawer-container class="sidebar-container" autosize>
+  <mat-drawer mode="side" opened class="drawer">
+    <div class="vertical-center" *ngFor="let button of menuButtons">
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+      >
+        <mat-icon>{{ button.icon }}</mat-icon>
+      </button>
+      <span class="button-font">{{ button.text }}</span>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content class="page-content">
+    <ng-content></ng-content>
+  </mat-drawer-content>
+</mat-drawer-container>
