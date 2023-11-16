@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren: async (): Promise<Type<unknown>> =>
       import('./features/home/home.module').then((mod) => mod.HomeModule),
   },
+  {
+    path: 'alunos',
+    loadChildren: async (): Promise<Type<unknown>> =>
+      import('./features/alunos/alunos.module').then((mod) => mod.AlunosModule),
+  },
 ];
 
 @NgModule({
