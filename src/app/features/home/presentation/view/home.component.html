@@ -1,4 +1,10 @@
-<h1>Ola Professor !</h1>
+<div class="page-header">
+  <h1>Avaliacoes</h1>
+
+  <button mat-fab matTooltip="Criar nova avaliacao" color="primary" aria-label="Criar uma nova avaliacao">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
 
 <form class="mt-4">
   <mat-form-field class="search-field">
@@ -44,3 +50,9 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
+
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>

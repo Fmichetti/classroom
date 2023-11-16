@@ -8,6 +8,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   imports: [
@@ -18,6 +20,8 @@ import { MatInputModule } from '@angular/material/input';
     MatTableModule,
     MatIconModule,
     MatInputModule,
+    MatTooltipModule,
+    MatPaginatorModule,
   ],
   exports: [HomeComponent],
   declarations: [HomeComponent],
