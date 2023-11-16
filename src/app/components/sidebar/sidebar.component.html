@@ -3,7 +3,8 @@
     <div class="vertical-center" *ngFor="let button of menuButtons">
       <button
         mat-icon-button
-        aria-label="Example icon button with a vertical three dot icon"
+        aria-label="Menu button"
+        [routerLink]="'/' + button.id"
       >
         <mat-icon>{{ button.icon }}</mat-icon>
       </button>
