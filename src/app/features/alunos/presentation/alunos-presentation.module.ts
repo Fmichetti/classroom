@@ -21,7 +21,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   imports: [
@@ -41,7 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatDividerModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule,
   ],
   exports: [AlunosComponent],
   declarations: [AlunosComponent, ListComponent, NewComponent, EditComponent],
