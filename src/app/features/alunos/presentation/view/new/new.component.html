@@ -1,1 +1,50 @@
-<p>new works!</p>
+<div class="page-header">
+  <h1>Novo Aluno</h1>
+</div>
+
+<form class="mt-4 form-body" [formGroup]="alunosNewViewModelService.alunoForm">
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput formControlName="nome" />
+  </mat-form-field>
+
+  <mat-form-field class="mt-2">
+    <mat-label>Nascimento</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="nascimento" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="mt-2">
+    <mat-label>Turma</mat-label>
+    <mat-select formControlName="turma">
+      <mat-option *ngFor="let item of alunosNewViewModelService.turmas" [value]="item.ID">
+        {{ item.nome }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="mt-2">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" />
+  </mat-form-field>
+
+  <mat-form-field class="mt-2">
+    <mat-label>Username</mat-label>
+    <input matInput formControlName="username" />
+  </mat-form-field>
+</form>
+
+<mat-divider></mat-divider>
+
+<div class="mt-2 footer-buttons">
+  <button mat-stroked-button class="mr-2" routerLink="/alunos">Voltar</button>
+
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="alunosNewViewModelService.criarNovoAluno()"
+  >
+    Salvar
+  </button>
+</div>

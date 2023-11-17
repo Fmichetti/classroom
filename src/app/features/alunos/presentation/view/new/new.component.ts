@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { AlunosListViewModelService } from '../../view-model/alunos-list-view-model.service';
+import { AlunosNewViewModelService } from '../../view-model/alunos-new-view-model.service';
 
 @Component({
   selector: 'app-new',
@@ -8,14 +8,14 @@ import { AlunosListViewModelService } from '../../view-model/alunos-list-view-mo
 })
 export class NewComponent implements OnInit, OnDestroy{
   constructor(
-    public readonly alunosListViewModelService: AlunosListViewModelService
+    public readonly alunosNewViewModelService: AlunosNewViewModelService
   ) {}
 
   public ngOnInit(): void {
-    this.alunosListViewModelService.initViewModel();
+    this.alunosNewViewModelService.initViewModel();
   }
 
   public ngOnDestroy(): void {
-    this.alunosListViewModelService.destroyViewModel();
+    this.alunosNewViewModelService.destroyViewModel();
   }
 }

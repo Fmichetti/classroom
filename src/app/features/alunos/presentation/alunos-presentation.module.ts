@@ -15,6 +15,12 @@ import { EditComponent } from './view/edit/edit.component';
 import { RouterModule } from '@angular/router';
 import { AlunosListViewModelService } from './view-model/alunos-list-view-model.service';
 import { AlunosNewViewModelService } from './view-model/alunos-new-view-model.service';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDividerModule } from '@angular/material/divider';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -28,7 +34,14 @@ import { AlunosNewViewModelService } from './view-model/alunos-new-view-model.se
     MatInputModule,
     MatTooltipModule,
     MatPaginatorModule,
-    RouterModule
+    RouterModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatNativeDateModule,
+    MatDividerModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
   exports: [AlunosComponent],
   declarations: [AlunosComponent, ListComponent, NewComponent, EditComponent],
