@@ -10,21 +10,23 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ComponentModule } from "../../components/components.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatButtonModule,
-    MatGridListModule,
-    MatTableModule,
-    MatIconModule,
-    MatInputModule,
-    MatTooltipModule,
-    MatPaginatorModule,
-  ],
-  exports: [HomeComponent],
-  declarations: [HomeComponent],
-  providers: [HomeViewModelService],
+    exports: [HomeComponent],
+    declarations: [HomeComponent],
+    providers: [HomeViewModelService],
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatButtonModule,
+        MatGridListModule,
+        MatTableModule,
+        MatIconModule,
+        MatInputModule,
+        MatTooltipModule,
+        MatPaginatorModule,
+        ComponentModule
+    ]
 })
 export class HomePresentationModule {}

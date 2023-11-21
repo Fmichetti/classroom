@@ -22,6 +22,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatIconModule,
     MatSidenavModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent],
 })

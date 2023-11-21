@@ -1,0 +1,69 @@
+div {
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 4px;
+  text-align: center;
+}
+
+th {
+  color: black;
+  font-weight: 700;
+}
+
+td {
+  cursor: pointer;
+  border-radius: 100%;
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+td:hover {
+  background-color: #ffc107;
+  width: 2rem;
+  height: 2rem;
+}
+
+.today {
+  background-color: #ffc107; /* Set background color for the current day */
+}
+
+/* Updated styles for better layout */
+.day-container {
+  position: relative;
+  width: 2rem;
+  height: 1.6rem;
+}
+
+.date {
+  text-align: center;
+  margin-top: 5px; /* Adjust the margin to separate date from event dot */
+}
+
+.event-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

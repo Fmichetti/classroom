@@ -4,7 +4,7 @@
 }
 
 .drawer {
-  background-color: #F4F6FC;
+  background-color: #3f51b5;
   border: none;
   padding: 8px;
   // padding-top: 1.5rem;
@@ -12,7 +12,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #454746;
+  color: white;
+  padding-top: 1.5rem;
 
   .drawer-items {
     display: flex;

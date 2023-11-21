@@ -8,6 +8,16 @@ import { Component } from '@angular/core';
 export class SidebarComponent {
   public menuButtons = [
     {
+      id: 'home',
+      text: 'Home',
+      icon: 'home',
+    },
+    {
+      id: 'callendar',
+      text: 'Calendario',
+      icon: 'calendar_month',
+    },
+    {
       id: '',
       text: 'Avaliacao',
       icon: 'description',
