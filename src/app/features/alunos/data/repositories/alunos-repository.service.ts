@@ -6,7 +6,7 @@ import { IAlunoParams, IUserParams } from '../interfaces/aluno.interface';
 @Injectable()
 export class AlunosRepositoryService {
   public url = 'http://localhost:8080';
-  public token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MDAyNDkzODMsInVzZXJfaWQiOjF9.OXLkmlFmU2GrzcQOQvjujW5TbCPX25enM21eoXNL-Oo';
+  public token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MDA2ODA3MDYsInVzZXJfaWQiOjF9.vJnPrdEtuFawBxdWZsfNrcwSi4rZBfQg4mUy27Fa5J8';
 
   constructor(private readonly http: HttpClient) {}
 
@@ -27,6 +27,7 @@ export class AlunosRepositoryService {
       nome: params.nome,
       data_nascimento: params.data_nascimento,
       user_id: params.user_id,
+      turma_id: params.turma_id
     }, {headers: headers});
   }
 
@@ -36,5 +37,14 @@ export class AlunosRepositoryService {
       'Authorization': `Bearer ${this.token}`
     })
     return this.http.get<Observable<any>>(this.url + `/api/turmas`, {headers: headers});
+  }
+
+  public listaTodosAlunos(): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.token}`
+    })
+
+    return this.http.get<Observable<any>>(this.url + `/api/alunos`, {headers: headers})
   }
 }

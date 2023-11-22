@@ -12,7 +12,7 @@ export interface IUserParams {
 }
 
 export interface ITurmaResposnse {
-  ID: number;
+  ID: string;
   CreatedAt: string;
   UpdatedAt: string;
   DeletedAt: string;

@@ -1,17 +1,29 @@
 import { Injectable } from '@angular/core';
+import { AlunosRepositoryService } from '../../data/repositories/alunos-repository.service';
 
 @Injectable()
 export class AlunosListViewModelService {
+  displayedColumns: string[] = [
+    'id',
+    'nome',
+    'turma',
+  ];
 
-  constructor() {}
+  public dataSource: Array<any> = []
 
-  public initViewModel(): void {}
+  constructor(
+    private readonly alunosRepositoryService: AlunosRepositoryService
+  ) {}
+
+  public initViewModel(): void {
+    this.buscaTodosAlunos();
+  }
 
   public destroyViewModel(): void {}
 
-
-
   public buscaTodosAlunos(): void {
-
+    this.alunosRepositoryService.listaTodosAlunos().subscribe((data) => {
+      this.dataSource = data
+    });
   }
 }

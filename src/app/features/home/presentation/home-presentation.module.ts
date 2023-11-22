@@ -10,7 +10,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { ComponentModule } from "../../components/components.module";
 
 @NgModule({
     exports: [HomeComponent],
@@ -25,8 +24,7 @@ import { ComponentModule } from "../../components/components.module";
         MatIconModule,
         MatInputModule,
         MatTooltipModule,
-        MatPaginatorModule,
-        ComponentModule
+        MatPaginatorModule
     ]
 })
 export class HomePresentationModule {}
