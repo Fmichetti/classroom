@@ -9,6 +9,11 @@
   </mat-form-field>
 
   <mat-form-field class="mt-2">
+    <mat-label>Matrícula</mat-label>
+    <input matInput formControlName="matricula" />
+  </mat-form-field>
+
+  <mat-form-field class="mt-2">
     <mat-label>Nascimento</mat-label>
     <input matInput [matDatepicker]="picker" formControlName="nascimento" />
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -43,6 +48,7 @@
   <button
     mat-raised-button
     color="primary"
+    [disabled]="alunosNewViewModelService.alunoForm.invalid"
     (click)="alunosNewViewModelService.criarNovoAluno()"
   >
     Salvar

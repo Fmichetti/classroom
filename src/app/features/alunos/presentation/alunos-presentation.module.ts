@@ -22,6 +22,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -43,6 +44,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HttpClientModule,
     FormsModule,
     MatSnackBarModule,
+    SharedModule
   ],
   exports: [AlunosComponent],
   declarations: [AlunosComponent, ListComponent, NewComponent, EditComponent],

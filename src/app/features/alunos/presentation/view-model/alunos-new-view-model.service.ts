@@ -27,6 +27,7 @@ export class AlunosNewViewModelService {
   public inicializaForm(): void {
     this.alunoForm = this._formBuilder.group({
       nome: ['', Validators.required],
+      matricula: ['', Validators.required],
       nascimento: ['', Validators.required],
       turma: ['', Validators.required],
       email: ['', Validators.required],
@@ -55,6 +56,7 @@ export class AlunosNewViewModelService {
             this._alunosRepositoryService
               .criaAluno({
                 nome: aluno.nome,
+                matricula: aluno.matricula,
                 data_nascimento: aluno.nascimento,
                 user_id: data.id,
                 turma_id: aluno.turma,

@@ -4,9 +4,10 @@ import { AlunosRepositoryService } from '../../data/repositories/alunos-reposito
 @Injectable()
 export class AlunosListViewModelService {
   displayedColumns: string[] = [
-    'id',
     'nome',
+    'matricula',
     'turma',
+    'acoes'
   ];
 
   public dataSource: Array<any> = []

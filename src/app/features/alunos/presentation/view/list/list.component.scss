@@ -6,8 +6,21 @@ table {
   width: 100%;
 }
 
-.page-header{
+.page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.filter-value-input {
+  width: 100%;
+}
+
+.filter-selection-input {
+  width: 30rem;
+}
+
+.search-btn {
+  width: 15rem;
+  height: 3.5rem;
 }

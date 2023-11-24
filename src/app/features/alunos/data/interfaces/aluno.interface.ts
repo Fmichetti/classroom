@@ -1,5 +1,6 @@
 export interface IAlunoParams {
   nome: string;
+  matricula: string;
   data_nascimento: string;
   user_id: number;
   turma_id: string;

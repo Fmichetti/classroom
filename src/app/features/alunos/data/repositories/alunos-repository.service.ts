@@ -6,7 +6,7 @@ import { IAlunoParams, IUserParams } from '../interfaces/aluno.interface';
 @Injectable()
 export class AlunosRepositoryService {
   public url = 'http://localhost:8080';
-  public token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MDA2ODA3MDYsInVzZXJfaWQiOjF9.vJnPrdEtuFawBxdWZsfNrcwSi4rZBfQg4mUy27Fa5J8';
+  public token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MDA4NTg3NzksInVzZXJfaWQiOjF9.bmIQtTm6WCcJ37MLb4v-j-JgjZZ5gp3W2uzXM_usmCs';
 
   constructor(private readonly http: HttpClient) {}
 
@@ -25,6 +25,7 @@ export class AlunosRepositoryService {
     })
     return this.http.post<Observable<any>>(this.url + `/api/alunos`, {
       nome: params.nome,
+      matricula: params.matricula,
       data_nascimento: params.data_nascimento,
       user_id: params.user_id,
       turma_id: params.turma_id
