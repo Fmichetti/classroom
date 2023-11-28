@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IAlunoParams, IAlunoResponse, IUserParams } from '../interfaces/aluno.interface';
@@ -6,7 +6,7 @@ import { IAlunoParams, IAlunoResponse, IUserParams } from '../interfaces/aluno.i
 @Injectable()
 export class AlunosRepositoryService {
   public url = 'http://localhost:8080';
-  public token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MDEyMDQxNjIsInVzZXJfaWQiOjF9.28MrZ2qlWPwo-hiuTZ1h8U758rfYdoA45mbHsmzumc0';
+  public token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JpemVkIjp0cnVlLCJleHAiOjE3MDEyMTAyODMsInVzZXJfaWQiOjF9.POl8spPDVyNpw-n5BSXCHpkhHMOsjmAD-PzbK9eEIvM';
 
   constructor(private readonly http: HttpClient) {}
 
@@ -40,12 +40,19 @@ export class AlunosRepositoryService {
     return this.http.get<Observable<any>>(this.url + `/api/turmas`, {headers: headers});
   }
 
-  public listaTodosAlunos(): Observable<IAlunoResponse[]> {
+  public listaTodosAlunos(chave: string, valor: string): Observable<IAlunoResponse[]> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.token}`
     })
 
-    return this.http.get<IAlunoResponse[]>(this.url + `/api/alunos`, {headers: headers})
+    let params = new HttpParams();
+
+    if(chave != ''){
+     params = new HttpParams()
+     .set(chave, valor);
+    }
+
+    return this.http.get<IAlunoResponse[]>(this.url + `/api/alunos`, {headers: headers, params: params})
   }
 }

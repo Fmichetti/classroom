@@ -12,21 +12,20 @@
   </button>
 </div>
 
-<form action="" class="d-flex mt-4">
+<form class="d-flex mt-4" [formGroup]="formGroup">
   <mat-form-field appearance="outline" class="filter-selection-input mr-1">
     <mat-label>Filtro</mat-label>
-    <mat-select>
-      <mat-option value="one">First option</mat-option>
-      <mat-option value="two">Second option</mat-option>
+    <mat-select formControlName="filterOptionValue">
+      <mat-option *ngFor="let filter of filters" [value]="filter">{{filter}}</mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-form-field appearance="outline" class="filter-value-input mr-1">
     <mat-label>Selecione o filtro...</mat-label>
-    <input matInput />
+    <input matInput formControlName="filterValue"/>
   </mat-form-field>
 
-  <button mat-flat-button color="primary" class="search-btn">Buscar</button>
+  <button mat-flat-button color="primary" class="search-btn" (click)="filtrar()">Buscar</button>
 </form>
 
 <table mat-table [dataSource]="dataSource" class="data-table" matSort>
