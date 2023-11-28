@@ -23,6 +23,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SharedModule } from '../../shared/shared.module';
+import { MatSortModule } from '@angular/material/sort';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 @NgModule({
   imports: [
@@ -44,6 +47,8 @@ import { SharedModule } from '../../shared/shared.module';
     HttpClientModule,
     FormsModule,
     MatSnackBarModule,
+    MatSortModule,
+    MatMenuModule,
     SharedModule
   ],
   exports: [AlunosComponent],

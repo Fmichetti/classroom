@@ -13,11 +13,6 @@ export class SidebarComponent {
       icon: 'home',
     },
     {
-      id: 'callendar',
-      text: 'Calendario',
-      icon: 'calendar_month',
-    },
-    {
       id: '',
       text: 'Avaliacao',
       icon: 'description',

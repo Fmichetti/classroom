@@ -1,30 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ViewChild } from '@angular/core';
 import { AlunosRepositoryService } from '../../data/repositories/alunos-repository.service';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatSort } from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Injectable()
 export class AlunosListViewModelService {
-  displayedColumns: string[] = [
-    'nome',
-    'matricula',
-    'turma',
-    'acoes'
-  ];
-
-  public dataSource: Array<any> = []
-
   constructor(
     private readonly alunosRepositoryService: AlunosRepositoryService
   ) {}
 
-  public initViewModel(): void {
-    this.buscaTodosAlunos();
-  }
+  public initViewModel(): void {}
 
   public destroyViewModel(): void {}
-
-  public buscaTodosAlunos(): void {
-    this.alunosRepositoryService.listaTodosAlunos().subscribe((data) => {
-      this.dataSource = data
-    });
-  }
 }

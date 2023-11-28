@@ -19,3 +19,9 @@ export interface ITurmaResposnse {
   DeletedAt: string;
   nome: string;
 }
+
+export interface IAlunoResponse {
+  matricula: string;
+  nome: string;
+  turma: string;
+}
